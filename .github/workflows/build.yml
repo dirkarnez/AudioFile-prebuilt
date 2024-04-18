@@ -106,6 +106,7 @@ jobs:
             set CD_LINUX=%CD:\=/%
             gcc --version &&^
             cd ${{ env.libraryName }} &&^
+            cmake.exe -LH &&^
             cmake.exe -G"MinGW Makefiles" ^
             -DCMAKE_BUILD_TYPE=Release ^
             -DBUILD_SHARED_LIBS=OFF ^
